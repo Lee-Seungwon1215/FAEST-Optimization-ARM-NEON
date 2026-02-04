@@ -53,3 +53,17 @@ option(
   value: 'auto',
   description: 'doxygen API documentation',
 )
+option(
+  'parallel-vole',
+  type: 'feature',
+  value: 'disabled',
+  description: 'Enable pthread parallelization for VOLE operations',
+)
+option(
+  'num-threads',
+  type: 'integer',
+  min: 1,
+  max: 32,
+  value: 4,
+  description: 'Number of threads for parallel VOLE (requires parallel-vole=enabled)',
+)

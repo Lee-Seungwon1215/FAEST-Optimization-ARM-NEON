@@ -467,7 +467,18 @@ openssl = dependency('openssl', required: get_option('openssl'))
 valgrind = dependency('valgrind', required: get_option('valgrind'))
 valgrind_exec = find_program('valgrind', required: valgrind.found())
 
+# parallel VOLE with pthread
+parallel_vole = get_option('parallel-vole')
+if parallel_vole.enabled()
+  threads_dep = dependency('threads', required: true)
+  num_threads = get_option('num-threads')
+  defines += ['-DFAEST_PARALLEL_VOLE', '-DFAEST_NUM_THREADS=@0@'.format(num_threads)]
+endif
+
 build_dependencies = []
+if parallel_vole.enabled()
+  build_dependencies += [threads_dep]
+endif
 if openssl.found()
   build_dependencies += [openssl]
   defines += '-DHAVE_OPENSSL'
