@@ -1,0 +1,26 @@
+# Build directories
+build/
+build-*/
+
+# Object files
+*.o
+*.a
+*.so
+*.dylib
+
+# Clangd cache
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Benchmark results (generated)
+bench_results/
+
+# Python
+__pycache__/
+*.pyc
