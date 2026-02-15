@@ -1,0 +1,56 @@
+Filters: [bench]
+Randomness seeded to: 2905602913
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+faest_192s_bench_c2 is a Catch2 v3.4.0 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+bench keygen
+-------------------------------------------------------------------------------
+/Users/leeseungwon/faest-arm-optimized/faest-neon/tools/bench_c2.cpp:13
+...............................................................................
+
+benchmark name                       samples       iterations    estimated
+                                     mean          low mean      high mean
+                                     std dev       low std dev   high std dev
+-------------------------------------------------------------------------------
+keygen                                         100            25      1.665 ms 
+                                        671.317 ns    662.467 ns    684.319 ns 
+                                        54.1273 ns    39.6994 ns    73.5145 ns 
+                                                                               
+
+-------------------------------------------------------------------------------
+bench sign
+-------------------------------------------------------------------------------
+/Users/leeseungwon/faest-arm-optimized/faest-neon/tools/bench_c2.cpp:22
+...............................................................................
+
+benchmark name                       samples       iterations    estimated
+                                     mean          low mean      high mean
+                                     std dev       low std dev   high std dev
+-------------------------------------------------------------------------------
+sign                                           100             1      15.134 s 
+                                        133.124 ms    132.108 ms    134.315 ms 
+                                        5.63545 ms    4.87506 ms    6.72678 ms 
+                                                                               
+
+-------------------------------------------------------------------------------
+bench verify
+-------------------------------------------------------------------------------
+/Users/leeseungwon/faest-arm-optimized/faest-neon/tools/bench_c2.cpp:42
+...............................................................................
+
+benchmark name                       samples       iterations    estimated
+                                     mean          low mean      high mean
+                                     std dev       low std dev   high std dev
+-------------------------------------------------------------------------------
+verify                                         100             1     11.4979 s 
+                                        114.484 ms    114.342 ms    114.845 ms 
+                                        1.07394 ms    449.377 us     2.2009 ms 
+                                                                               
+
+===============================================================================
+test cases: 3 | 3 passed
+assertions: - none -
+
