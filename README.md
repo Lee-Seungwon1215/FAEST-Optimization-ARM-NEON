@@ -436,17 +436,3 @@ Full data in [`results/energy_m2.csv`](results/energy_m2.csv). To regenerate fig
 | Raspberry Pi 4 (Cortex-A72) | `faest-neon-RPi4` | GNU (Linux) |
 | Other ARM64 Linux | `faest-neon-RPi4` | GNU (Linux) |
 
----
-
-## License
-
-MIT License. See [LICENSE](faest-neon/LICENSE).
-
-The FAEST reference implementation (`faest-ref`) is based on the original FAEST submission, available at [https://faest.info/](https://faest.info/).
-
----
-
-## References
-
-- [FAEST official website](https://faest.info/)
-- [NIST Post-Quantum Cryptography Standardization](https://csrc.nist.gov/projects/post-quantum-cryptography)
