@@ -32,7 +32,7 @@ RPI4_DIR   = os.path.join(ROOT_DIR, "benchmark_results_RPi4")
 ENERGY_SRC = os.path.join(ROOT_DIR, "benchmark_energy_M2", "energy_results_M2.csv")
 RESULTS_DIR = os.path.join(ROOT_DIR, "results")
 
-BUILDS = ["ref", "opt-ref", "neon", "neon-pthread"]
+BUILDS = ["ref", "opt-ref", "neon", "neon-pthread", "neon_owf"]
 PARAMS = [
     "128s", "128f", "192s", "192f", "256s", "256f",
     "em_128s", "em_128f", "em_192s", "em_192f", "em_256s", "em_256f",
