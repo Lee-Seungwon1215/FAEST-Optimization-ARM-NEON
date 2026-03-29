@@ -14,7 +14,7 @@
 #include "utils.h"
 
 /* ARM64 NEON support */
-#if defined(__aarch64__) || defined(_M_ARM64)
+#if (defined(__aarch64__) || defined(_M_ARM64)) && !defined(DISABLE_NEON_OWF)
 #define HAVE_ARM64_NEON 1
 #include "aes_neon/owf_neon.h"
 #endif

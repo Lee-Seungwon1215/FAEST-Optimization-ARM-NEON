@@ -24,3 +24,17 @@ bench_results/
 # Python
 __pycache__/
 *.pyc
+.venv/
+
+# Claude Code internal
+.claude/
+
+# Energy measurement raw output (large binary logs)
+benchmark_energy_M2/
+
+# Raw benchmark result files (use benchmark_results_all.txt for summary)
+benchmark_results_M2/
+benchmark_results_RPi4/
+
+# Generated figures
+*.pdf
