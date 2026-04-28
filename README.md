@@ -13,8 +13,6 @@ ARM-optimized implementation of FAEST, a post-quantum signature scheme based on 
 
 FAEST is one of the candidates in the NIST PQC standardization process. The reference implementation is pure C and quite slow on ARM, mainly because AES runs sequentially. We rewrote the AES layer using NEON intrinsics with 4-block and 8-block interleaving, and optionally parallelized the VOLE phase with pthreads.
 
-This is distinct from the FAEST team's official ARM implementation, which uses the ARMv8 Cryptographic Extension for hardware-accelerated AES and GF multiplication. Our implementation targets NEON-only environments — no Crypto Extension required. AES runs via `tbl`-based S-box lookup across parallel blocks, and GF arithmetic is done entirely in software. Any performance gap between the two reflects different hardware assumptions, not optimization strategy.
-
 Two main directories:
 - `faest-neon` — for Apple Silicon / macOS (uses `.align` assembler syntax)
 - `faest-neon-RPi4` — for Raspberry Pi 4 / Linux (uses `.balign` for GNU assembler)
